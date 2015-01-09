@@ -1,6 +1,7 @@
 package nl.saxion.da.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -143,12 +144,18 @@ public class Node {
 		if(woord != null)
 		{
 			System.out.println("woord gevonden, deleten in proces");
-			
+			 Collections.reverse(woord);
+			 for(int i =0; i<woord.size(); i++)
+			 {
+				 Node x = woord.get(i);
+				 x.children = null;
+			 }	
 		}
 		else
 		{
 			System.out.println("woord kan je niet deleten want bestaat niet");
 		}
+	}
 //		ArrayList<Node> nodes;
 //		// zoek of de string er is
 //		ArrayList<Data> positions = (ArrayList<Data>) search(s, new ArrayList<Data>());
@@ -166,7 +173,7 @@ public class Node {
 //			}
 //		}
 	
-	}
+	
 
 
 	

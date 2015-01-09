@@ -65,6 +65,21 @@ public class app {
 		}
 		
 		 boom.delete("bom");
+			ArrayList<Node> v =  boom.searchPath("bom", new ArrayList<Node>());
+			if( v ==null)
+			{
+				System.out.println("woord bom niet meer gevonden");
+			}
+			else
+			{
+			for(Node child : v )
+			{
+				if(child.isWord())
+				{
+					System.out.println("woord bom gevonden en komt : " + child.getFrequency()+ " voor");
+				}
+			}
+			}
 	
 
 
