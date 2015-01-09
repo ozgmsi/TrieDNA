@@ -87,6 +87,7 @@ public class Node {
 	public ArrayList<Node> searchPath(String s, ArrayList<Node> output){
 		
 		if (isWord){
+			this.setFrequency(this.getFrequency()+1);
 			return output;
 		}
 		
@@ -177,6 +178,7 @@ public class Node {
 	{
 		if (search(s) != null){
 			searchPath(s, new ArrayList<Node>());
+			
 		}
 		insertReal(s,d);
 	}
@@ -442,5 +444,9 @@ public class Node {
 	 public Node getNodebyPosition(int position)
 	 {
 		 return null;
+	 }
+	 public boolean isWord()
+	 {
+		 return this.isWord;
 	 }
 }

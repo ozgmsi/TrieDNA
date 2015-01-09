@@ -36,15 +36,24 @@ public class app {
 		List<Data> search = boom.search("ozgur");
 		
 		/* Check of string bestaat methode */
-		System.out.println(boom.bestaatWoord("ozgur"));
-
-		if (search != null) {
-			for (Data data : search) {
-				System.out.println(data.getPositions());
+//		System.out.println(boom.bestaatWoord("ozgur"));
+//
+//		if (search != null) {
+//			for (Data data : search) {
+//				System.out.println(data.getPositions());
+//			}
+//			System.out.println("Woord gevonden");
+//		} else {
+//			System.out.println("Woord niet gevonden");
+//		}
+		
+		ArrayList<Node> x  =  boom.searchPath("aap", new ArrayList<Node>());
+		for(Node child : x )
+		{
+			if(child.isWord())
+			{
+				System.out.println("Woord aap gevonden en komt : " + child.getFrequency()+ " voor");
 			}
-			System.out.println("Woord gevonden");
-		} else {
-			System.out.println("Woord niet gevonden");
 		}
 
 		System.out.print(" \r programming is done");
