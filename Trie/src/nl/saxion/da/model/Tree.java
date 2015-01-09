@@ -31,7 +31,7 @@ public class Tree {
 			}
 			else 
 			{
-				root.children.add(new Node(woord,true));
+			 //	root.children.add(new Node(woord,true));
 			}
 		}
 		
