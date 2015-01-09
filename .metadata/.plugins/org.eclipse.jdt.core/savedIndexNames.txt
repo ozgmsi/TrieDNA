@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+C:\Users\Administrator\Desktop\newDNA\.metadata\.plugins\org.eclipse.jdt.core
+2705110053.index

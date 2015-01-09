@@ -1,4 +1,3 @@
-
 package nl.saxion.da.model;
 
 import java.util.ArrayList;
@@ -62,6 +61,12 @@ public class Node {
 			return false;
 	}
 
+	public boolean isMatch(String find)
+	{
+		return value.equals(find);
+	}
+	
+	
 	public ArrayList<Data> search(String s){
 		return search(s, new ArrayList<Data>());
 	}
@@ -210,8 +215,11 @@ public class Node {
 							}
 						}
 						System.out.println("collision detected split edit these words first " + alles);
+						//hasCollapse(alles);
 						collapse(this);
 						insertReal(s,d);
+						
+				
 					}
 					else if(node==null)
 					{
@@ -331,7 +339,20 @@ public class Node {
 
 	}
 	
-
+	 private void hasCollapse(String s)
+	 {
+		 
+//		 int first_occur_position = -1;
+//			BoyerMooreAlgoritme bm = new BoyerMooreAlgoritme(s);
+//			 first_occur_position = bm.search("");
+//			System.out.println("The text '" + s + "' is first found after the " 
+//	                                    + first_occur_position + " position.");
+//			if(first_occur_position==-1)
+//			{
+//				return false;
+//			}
+//			else{ return true;}
+	 }
 	 private void collapse(Node node)
 	 {
 		 if(node.children.size() ==1 && isLeaf(node.children.get(0)))
@@ -371,6 +392,11 @@ public class Node {
 				status = getValue(status,node);
 			}
 		 }
+//		 if(data.value!= null)
+//		 {
+//			 System.out.println("tekst die gewijzigd moet worden " + data.value); 
+//			 return getValue(data.value,data);
+//		 }
 	     return status;
 	 }
 	 
@@ -409,4 +435,3 @@ public class Node {
 		 return null;
 	 }
 }
-

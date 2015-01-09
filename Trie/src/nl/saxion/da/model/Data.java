@@ -19,7 +19,5 @@ public class Data {
 	{
 		return this.data;
 	}
-
-
 	
 }
