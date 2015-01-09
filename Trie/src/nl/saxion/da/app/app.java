@@ -50,6 +50,9 @@ public class app {
 		
 		System.out.println(boom.getWordFrequency("aap") + "<<<");
 		System.out.println(boom.search("aap"));
+		ArrayList<Node> x  =  boom.searchPath("aap", new ArrayList<Node>());
+		
+		 boom.delete("bom");
 
 		System.out.print(" \r programming is done");
 	}
