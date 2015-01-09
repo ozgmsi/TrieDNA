@@ -180,7 +180,7 @@ public class Node {
 	public void insert(String s , Data d)
 	{
 		if (search(s) != null){
-			
+			searchPath(s, new ArrayList<Node>());
 		}
 		insertReal(s,d);
 	}
