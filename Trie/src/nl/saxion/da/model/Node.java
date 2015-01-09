@@ -156,22 +156,7 @@ public class Node {
 			System.out.println("woord kan je niet deleten want bestaat niet");
 		}
 	}
-//		ArrayList<Node> nodes;
-//		// zoek of de string er is
-//		ArrayList<Data> positions = (ArrayList<Data>) search(s, new ArrayList<Data>());
-//		if(positions!=null)
-//		{
-//			nodes = new ArrayList<Node>();
-//			
-//			for(Data d : positions)
-//			{
-//				ArrayList<Integer> posities = d.getPositions();
-//				for(Integer i : posities)
-//				{
-//				  nodes.add(getNodebyPosition(i));
-//				}
-//			}
-//		}
+
 	
 	
 
