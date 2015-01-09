@@ -107,7 +107,7 @@ public class Node {
 		return null;
 	}
 	
-	public ArrayList<Data> search(String s, ArrayList<Data> output){
+	private ArrayList<Data> search(String s, ArrayList<Data> output){
 		/* Als het punt is bereikt of dit een woord is, geef de output met posities terug */
 		if (isWord){
 			return output;
@@ -179,6 +179,15 @@ public class Node {
 			
 		}
 		insertReal(s,d);
+	}
+	
+	/**
+	 * Bekijkt of het woordt in de trie opgeslagen staat
+	 * @param s het woord waar naar gezocht wordt
+	 * @return true als woord bestaat in de trie
+	 */
+	public boolean bestaatWoord(String s){
+		return !search(s).isEmpty();
 	}
 	
 	/**
