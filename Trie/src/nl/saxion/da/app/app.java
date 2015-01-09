@@ -55,6 +55,18 @@ public class app {
 				System.out.println("Woord aap gevonden en komt : " + child.getFrequency()+ " voor");
 			}
 		}
+		ArrayList<Node> b =  boom.searchPath("pistool", new ArrayList<Node>());
+		for(Node child : b )
+		{
+			if(child.isWord())
+			{
+				System.out.println("woord bom gevonden en komt : " + child.getFrequency()+ " voor");
+			}
+		}
+		
+		 boom.delete("bom");
+	
+
 
 		System.out.print(" \r programming is done");
 	}

@@ -139,26 +139,33 @@ public class Node {
 	
 	public  void delete(String s)
 	{
-		ArrayList<Node> nodes;
-		// zoek of de string er is
-		ArrayList<Data> positions = (ArrayList<Data>) search(s, new ArrayList<Data>());
-		if(positions!=null)
+		ArrayList<Node> woord = searchPath(s, new ArrayList<Node>());
+		if(woord != null)
 		{
-			nodes = new ArrayList<Node>();
+			System.out.println("woord gevonden, deleten in proces");
 			
-			for(Data d : positions)
-			{
-				ArrayList<Integer> posities = d.getPositions();
-				for(Integer i : posities)
-				{
-				  nodes.add(getNodebyPosition(i));
-				}
-			}
 		}
 		else
 		{
 			System.out.println("woord kan je niet deleten want bestaat niet");
 		}
+//		ArrayList<Node> nodes;
+//		// zoek of de string er is
+//		ArrayList<Data> positions = (ArrayList<Data>) search(s, new ArrayList<Data>());
+//		if(positions!=null)
+//		{
+//			nodes = new ArrayList<Node>();
+//			
+//			for(Data d : positions)
+//			{
+//				ArrayList<Integer> posities = d.getPositions();
+//				for(Integer i : posities)
+//				{
+//				  nodes.add(getNodebyPosition(i));
+//				}
+//			}
+//		}
+	
 	}
 
 
