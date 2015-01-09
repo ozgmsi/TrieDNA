@@ -92,6 +92,10 @@ public class Node {
 		
 		if (!s.isEmpty()){
 			
+			if (isWord){
+				frequency++;
+			}
+			
 			if (hasChild(s.substring(0, 1))){
 				
 				Node child = getChild(s.substring(0, 1));
