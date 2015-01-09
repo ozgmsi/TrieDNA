@@ -47,14 +47,9 @@ public class app {
 //			System.out.println("Woord niet gevonden");
 //		}
 		
-		ArrayList<Node> x  =  boom.searchPath("aap", new ArrayList<Node>());
-		for(Node child : x )
-		{
-			if(child.isWord())
-			{
-				System.out.println("Woord aap gevonden en komt : " + child.getFrequency()+ " voor");
-			}
-		}
+		
+		System.out.println(boom.getWordFrequency("aap") + "<<<");
+		System.out.println(boom.search("aap"));
 
 		System.out.print(" \r programming is done");
 	}

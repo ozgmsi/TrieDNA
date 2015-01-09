@@ -83,6 +83,17 @@ public class Node {
 		return frequency;
 	}
 	
+	public int getWordFrequency(String searchTerm){
+		ArrayList<Node> searchPath = searchPath(searchTerm, new ArrayList<Node>());
+		for(Node pathNode : searchPath){
+			if (pathNode.isWord()){
+				return pathNode.getFrequency();
+			}
+		}
+		return 0;
+	}
+	
+	
 	/** TODO IMPLEMENT SEARCH PATH **/
 	public ArrayList<Node> searchPath(String s, ArrayList<Node> output){
 		
