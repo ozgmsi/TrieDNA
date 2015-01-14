@@ -452,4 +452,13 @@ public class Node {
 	 {
 		 return this.isWord;
 	 }
+	 public int getWordFrequency(String searchTerm){
+		 ArrayList<Node> searchPath = searchPath(searchTerm, new ArrayList<Node>());
+		 for(Node pathNode : searchPath){
+		 if (pathNode.isWord()){
+		 return pathNode.getFrequency();
+		 }
+		 }
+		 return 0;
+		 }
 }
